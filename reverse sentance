@@ -1,0 +1,10 @@
+sentence=input().split()
+reverse_sentence=[]
+count=0
+for word in sentence:
+    if count%2==0:
+        reverse_sentence.append(word[::-1])
+    else:    
+        reverse_sentence.append(word)
+    count+=1    
+print(" ".join(reverse_sentence))
