@@ -1,0 +1,12 @@
+words=input().split()
+N=int(input())
+words=list(set(words))
+length=len(words)
+unique_pairs=[]
+for i in range(length):
+    for j in range(length):
+        if i!=j:
+            if N==len(words[i]+words[j]):
+                unique_pairs.append(words[i]+words[j])
+unique_pairs=(sorted(unique_pairs))
+print(*unique_pairs,sep="\n")
